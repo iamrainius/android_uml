@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg936\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 STHeitiSC-Light;\f2\fswiss\fcharset0 ArialMT;
+\f3\fnil\fcharset0 Consolas-Bold;\f4\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red8\green81\blue140;\red74\green74\blue74;
+\red246\green246\blue246;\red164\green8\blue0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh15640\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 Activity & Window\
+\
+- Activity
+\f1 \'b8\'ba\'d4\'f0\'b4\'b4\'bd\'a8\'b4\'b0\'bf\'da
+\f0 \
+- 
+\f1 \'cd\'a8\'b9\'fd
+\f0 setContentView(View)
+\f1 \'c0\'b4\'c9\'e8\'d6\'c3
+\f0 UI
+\f1 \'b5\'bd\'b4\'b0\'bf\'da
+\f0 \
+- 
+\f1 \'d2\'bb\'b0\'e3\'ca\'c7\'c8\'ab\'c6\'c1
+\f0 \
+- 
+\f1 \'bf\'c9\'d2\'d4\'d7\'f7\'ce\'aa\'b8\'a1\'b6\'af\'b4\'b0\'bf\'da\'a3\'ac\'d0\'e8\'d2\'aa\'cd\'a8\'b9\'fd\'d6\'f7\'cc\'e2
+\f0 windowIsFloating\
+- 
+\f1 \'bf\'c9\'d2\'d4\'c7\'b6\'c8\'eb\'b5\'bd\'c6\'e4\'cb\'fc
+\f0 activity
+\f1 \'a3\'ba\'cd\'a8\'b9\'fd
+\f0 ActivityGroup\
+\
+- Android
+\f1 \'d3\'a6\'d3\'c3\'cd\'a8\'b9\'fd\'cf\'fb\'cf\'a2\'c0\'b4\'c7\'fd\'b6\'af
+\f0 \
+* 
+\f1 \'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0
+\f0 \
+* Looper: 
+\f1 \'b4\'d3\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'bb\'f1\'c8\'a1\'cf\'fb\'cf\'a2
+\f0  \
+* Handler: 
+\f1 \'b4\'a6\'c0\'ed\'cf\'fb\'cf\'a2
+\f0 \
+\
+- ActivityManagerService
+\f1 \'d3\'eb\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'bd\'bb\'bb\'a5\'a3\'a8\'bc\'d3\'d4\'d8\'bb\'ee\'b6\'af\'a1\'a2\'b7\'fe\'ce\'f1\'a3\'ac\'b4\'a6\'c0\'ed\'b9\'e3\'b2\'a5\'a3\'a9\'a3\'ac\'cd\'a8\'b9\'fd
+\f0 Binder
+\f1 \'bb\'fa\'d6\'c6\'cd\'a8\'d6\'aa\'d3\'a6\'d3\'c3
+\f0 \
+- 
+\f1 \'d3\'a6\'d3\'c3\'bd\'ab\'c7\'eb\'c7\'f3\'b7\'e2\'d7\'b0\'b3\'c9\'d2\'bb\'b8\'f6\'cf\'fb\'cf\'a2\'a3\'ac\'b7\'c5\'b5\'bd\'d3\'a6\'d3\'c3\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'a1\'a3
+\f0 \
+\
+\
+
+\f2\fs28 \cf2 \
+\pard\pardeftab720\sa280
+\cf2 1. 
+\f1 \'cf\'fb\'cf\'a2\'d1\'ad\'bb\'b7
+\f2 \
+A. 
+\f1 \'d4\'da
+\f2 Java
+\f1 \'b2\'e3\'a3\'ac\'b4\'b4\'bd\'a8\'c1\'cb\'d2\'bb\'b8\'f6
+\f2 Looper
+\f1 \'b6\'d4\'cf\'f3\'a3\'ac\'d5\'e2\'b8\'f6
+\f2 Looper
+\f1 \'b6\'d4\'cf\'f3\'ca\'c7\'d3\'c3\'c0\'b4\'bd\'f8\'c8\'eb\'cf\'fb\'cf\'a2\'d1\'ad\'bb\'b7\'b5\'c4\'a3\'ac\'cb\'fc\'b5\'c4\'c4\'da\'b2\'bf\'d3\'d0\'d2\'bb\'b8\'f6\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0
+\f2 MessageQueue
+\f1 \'b6\'d4\'cf\'f3
+\f2 mQueue
+\f1 \'a3\'bb
+\f2 \
+B. 
+\f1 \'d4\'da
+\f2 JNI
+\f1 \'b2\'e3\'a3\'ac\'b4\'b4\'bd\'a8\'c1\'cb\'d2\'bb\'b8\'f6
+\f2 NativeMessageQueue
+\f1 \'b6\'d4\'cf\'f3\'a3\'ac\'d5\'e2\'b8\'f6
+\f2 NativeMessageQueue
+\f1 \'b6\'d4\'cf\'f3\'b1\'a3\'b4\'e6\'d4\'da
+\f2 Java
+\f1 \'b2\'e3\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'b6\'d4\'cf\'f3
+\f2 mQueue
+\f1 \'b5\'c4\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf
+\f2 mPtr
+\f1 \'d6\'d0\'a3\'bb
+\f2 \
+C. 
+\f1 \'d4\'da
+\f2 C++
+\f1 \'b2\'e3\'a3\'ac\'b4\'b4\'bd\'a8\'c1\'cb\'d2\'bb\'b8\'f6
+\f2 Looper
+\f1 \'b6\'d4\'cf\'f3\'a3\'ac\'b1\'a3\'b4\'e6\'d4\'da
+\f2 JNI
+\f1 \'b2\'e3\'b5\'c4
+\f2 NativeMessageQueue
+\f1 \'b6\'d4\'cf\'f3\'b5\'c4\'b3\'c9\'d4\'b1\'b1\'e4\'c1\'bf
+\f2 mLooper
+\f1 \'d6\'d0\'a3\'ac\'d5\'e2\'b8\'f6\'b6\'d4\'cf\'f3\'b5\'c4\'d7\'f7\'d3\'c3\'ca\'c7\'a3\'ac\'b5\'b1
+\f2 Java
+\f1 \'b2\'e3\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'c3\'bb\'d3\'d0\'cf\'fb\'cf\'a2\'ca\'b1\'a3\'ac\'be\'cd\'ca\'b9
+\f2 Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'f7\'cf\'df\'b3\'cc\'bd\'f8\'c8\'eb\'b5\'c8\'b4\'fd\'d7\'b4\'cc\'ac\'a3\'ac\'b6\'f8\'b5\'b1
+\f2 Java
+\f1 \'b2\'e3\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'c0\'b4\'c1\'cb\'d0\'c2\'b5\'c4\'cf\'fb\'cf\'a2\'ba\'f3\'a3\'ac\'be\'cd\'bb\'bd\'d0\'d1
+\f2 Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'c0\'b4\'b4\'a6\'c0\'ed\'d5\'e2\'b8\'f6\'cf\'fb\'cf\'a2\'a1\'a3\
+- HandlerThread\'a3\'ba\'cc\'e1\'b9\'a9\'c1\'cbonLooperPrepared()\'bb\'d8\'b5\'f7\'a3\'ac\'bf\'c9\'d2\'d4\'b8\'b2\'b8\'c7\'d6\'ae\
+2. \'cf\'fb\'cf\'a2\'b5\'c4\'b7\'a2\'cb\'cd\
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0
+\f3\b\fs24 \cf3 {\listtext	1.	}public
+\f4\b0 \cf0 \'a0
+\f3\b \cf3 boolean
+\f4\b0 \cf0 \'a0sendMessageAtTime(Message\'a0msg,\'a0
+\f3\b \cf3 long
+\f4\b0 \cf0 \'a0uptimeMillis)\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	2.	}\'a0\'a0\'a0\'a0\{\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	3.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f3\b \cf3 boolean
+\f4\b0 \cf0 \'a0sent\'a0=\'a0
+\f3\b \cf3 false
+\f4\b0 \cf0 ;\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	4.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0MessageQueue\'a0queue\'a0=\'a0mQueue;\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	5.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f3\b \cf3 if
+\f4\b0 \cf0 \'a0(queue\'a0!=\'a0
+\f3\b \cf3 null
+\f4\b0 \cf0 )\'a0\{\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	6.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0msg.target\'a0=\'a0
+\f3\b \cf3 this
+\f4\b0 \cf0 ;\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	7.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0sent\'a0=\'a0queue.\cf6 enqueueMessage\cf0 (msg,\'a0uptimeMillis);\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	8.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	9.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f3\b \cf3 else
+\f4\b0 \cf0 \'a0\{\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	10.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0......\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	11.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb5 {\listtext	12.	}\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0
+\f3\b \cf3 return
+\f4\b0 \cf0 \'a0sent;\'a0\'a0\cf4 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720
+\ls1\ilvl0\cf0 \cb1 {\listtext	13.	}\'a0\'a0\'a0\'a0\}\'a0\'a0
+\f1\fs28 \cf2 \
+\pard\pardeftab720\sa280
+\cf2 \
+- 
+\f2 \'a0\'a0 \'a0 \'a0 \'a0
+\f1 \'b0\'d1\'cf\'fb\'cf\'a2\'bc\'d3\'c8\'eb\'b5\'bd\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'ca\'b1\'a3\'ac\'b7\'d6\'c1\'bd\'d6\'d6\'c7\'e9\'bf\'f6\'a3\'ac\'d2\'bb\'d6\'d6\'b5\'b1\'c7\'b0\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'ce\'aa\'bf\'d5\'ca\'b1\'a3\'ac\'d5\'e2\'ca\'b1\'ba\'f2\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'d2\'bb\'b0\'e3\'be\'cd\'ca\'c7\'b4\'a6\'d3\'da\'bf\'d5\'cf\'d0\'b5\'c8\'b4\'fd\'d7\'b4\'cc\'ac\'c1\'cb\'a3\'ac\'d5\'e2\'ca\'b1\'ba\'f2\'be\'cd\'d2\'aa\'bb\'bd\'d0\'d1\'cb\'fc\'a3\'ac\'c1\'ed\'d2\'bb\'d6\'d6\'c7\'e9\'bf\'f6\'ca\'c7\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'b2\'bb\'ce\'aa\'bf\'d5\'a3\'ac\'d5\'e2\'ca\'b1\'ba\'f2\'be\'cd\'b2\'bb\'d0\'e8\'d2\'aa\'bb\'bd\'d0\'d1\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'c1\'cb\'a3\'ac\'d2\'f2\'ce\'aa\'d5\'e2\'ca\'b1\'ba\'f2\'cb\'fc\'d2\'bb\'b6\'a8\'ca\'c7\'d4\'da\'c3\'a6\'d7\'c5\'b4\'a6\'d3\'da\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'b5\'c4\'cf\'fb\'cf\'a2\'a3\'ac\'d2\'f2\'b4\'cb\'b2\'bb\'bb\'e1\'b4\'a6\'d3\'da\'bf\'d5\'cf\'d0\'b5\'c8\'b4\'fd\'b5\'c4\'d7\'b4\'cc\'ac\'a1\'a3
+\f2 \
+\pard\pardeftab720
+\cf2 * 
+\f1 \'b5\'da\'d2\'bb\'d6\'d6\'c7\'e9\'bf\'f6\'b1\'c8\'bd\'cf\'bc\'f2\'b5\'a5\'a3\'ac\'d6\'bb\'d2\'aa\'b0\'d1\'cf\'fb\'cf\'a2\'b7\'c5\'d4\'da\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'cd\'b7\'be\'cd\'bf\'c9\'d2\'d4\'c1\'cb\'a3\'ba\
+\pard\pardeftab720\sa280
+\cf2 * \'b5\'da\'b6\'fe\'d6\'d6\'c7\'e9\'bf\'f6\'cf\'e0\'b6\'d4\'be\'cd\'b1\'c8\'bd\'cf\'b8\'b4\'d4\'d3\'d2\'bb\'d0\'a9\'c1\'cb\'a3\'ac\'c7\'b0\'c3\'e6\'ce\'d2\'c3\'c7\'cb\'b5\'b9\'fd\'a3\'ac\'b5\'b1\'cd\'f9\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'b7\'a2\'cb\'cd\'cf\'fb\'cf\'a2\'ca\'b1\'a3\'ac\'ca\'c7\'bf\'c9\'d2\'d4\'d6\'b8\'b6\'a8\'cf\'fb\'cf\'a2\'b5\'c4\'b4\'a6\'c0\'ed\'ca\'b1\'bc\'e4\'b5\'c4\'a3\'ac\'b6\'f8\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'b5\'c4\'cf\'fb\'cf\'a2\'a3\'ac\'be\'cd\'ca\'c7\'b0\'b4\'d5\'d5\'d5\'e2\'b8\'f6\'ca\'b1\'bc\'e4\'b4\'d3\'d0\'a1\'b5\'bd\'b4\'f3\'c0\'b4\'c5\'c5\'d0\'f2\'b5\'c4\'a3\'ac\'d2\'f2\'b4\'cb\'a3\'ac\'b5\'b1\'b0\'d1\'d0\'c2\'b5\'c4\'cf\'fb\'cf\'a2\'bc\'d3\'c8\'eb\'b5\'bd\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'ca\'b1\'a3\'ac\'be\'cd\'d2\'aa\'b8\'f9\'be\'dd\'cb\'fc\'b5\'c4\'b4\'a6\'c0\'ed\'ca\'b1\'bc\'e4\'c0\'b4\'d5\'d2\'b5\'bd\'ba\'cf\'ca\'ca\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'d9\'b7\'c5\'bd\'f8\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'c8\'a5\
+3. \'cf\'fb\'cf\'a2\'b4\'a6\'c0\'ed\
+- Handler.dispatchMessage()\
+\
+\'d6\'c1\'b4\'cb\'a3\'ac\'ce\'d2\'c3\'c7\'be\'cd\'b4\'d3\'cf\'fb\'cf\'a2\'d1\'ad\'bb\'b7\'a1\'a2\'cf\'fb\'cf\'a2\'b7\'a2\'cb\'cd\'ba\'cd\'cf\'fb\'cf\'a2\'b4\'a6\'c0\'ed\'c8\'fd\'b8\'f6\'b2\'bf\'b7\'d6\'b7\'d6\'ce\'f6\'cd\'ea
+\f2 Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'cf\'fb\'cf\'a2\'b4\'a6\'c0\'ed\'bb\'fa\'d6\'c6\'c1\'cb\'a3\'ac\'ce\'aa\'c1\'cb\'b8\'fc\'c9\'ee\'c0\'ed\'bd\'e2\'a3\'ac\'d5\'e2\'c0\'ef\'ce\'d2\'c3\'c7\'b6\'d4\'c6\'e4\'d6\'d0\'b5\'c4\'d2\'bb\'d0\'a9\'d2\'aa\'b5\'e3\'d7\'f7\'d2\'bb\'b8\'f6\'d7\'dc\'bd\'e1\'a3\'ba
+\f2 \
+\'a0\'a0 \'a0 \'a0 \'a0 A. Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'cf\'fb\'cf\'a2\'b4\'a6\'c0\'ed\'bb\'fa\'d6\'c6\'d3\'c9\'cf\'fb\'cf\'a2\'d1\'ad\'bb\'b7\'a1\'a2\'cf\'fb\'cf\'a2\'b7\'a2\'cb\'cd\'ba\'cd\'cf\'fb\'cf\'a2\'b4\'a6\'c0\'ed\'c8\'fd\'b8\'f6\'b2\'bf\'b7\'d6\'d7\'e9\'b3\'c9\'b5\'c4\'a1\'a3
+\f2 \
+\'a0\'a0 \'a0 \'a0 \'a0 B. Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'d4\'da\'bd\'f8\'c8\'eb\'cf\'fb\'cf\'a2\'d1\'ad\'bb\'b7\'b9\'fd\'b3\'cc\'c7\'b0\'a3\'ac\'bb\'e1\'d4\'da\'c4\'da\'b2\'bf\'b4\'b4\'bd\'a8\'d2\'bb\'b8\'f6
+\f2 Linux
+\f1 \'b9\'dc\'b5\'c0\'a3\'a8
+\f2 Pipe
+\f1 \'a3\'a9\'a3\'ac\'d5\'e2\'b8\'f6\'b9\'dc\'b5\'c0\'b5\'c4\'d7\'f7\'d3\'c3\'ca\'c7\'ca\'b9\'b5\'c3
+\f2 Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'f7\'cf\'df\'b3\'cc\'d4\'da\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'ce\'aa\'bf\'d5\'ca\'b1\'bf\'c9\'d2\'d4\'bd\'f8\'c8\'eb\'bf\'d5\'cf\'d0\'b5\'c8\'b4\'fd\'d7\'b4\'cc\'ac\'a3\'ac\'b2\'a2\'c7\'d2\'ca\'b9\'b5\'c3\'b5\'b1\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d3\'d0\'cf\'fb\'cf\'a2\'d0\'e8\'d2\'aa\'b4\'a6\'c0\'ed\'ca\'b1\'bb\'bd\'d0\'d1\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'a1\'a3
+\f2 \
+\'a0\'a0 \'a0 \'a0 \'a0 C. Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'d6\'f7\'cf\'df\'b3\'cc\'bd\'f8\'c8\'eb\'bf\'d5\'cf\'d0\'b5\'c8\'b4\'fd\'d7\'b4\'cc\'ac\'b5\'c4\'b7\'bd\'ca\'bd\'ca\'b5\'bc\'ca\'c9\'cf\'be\'cd\'ca\'c7\'d4\'da\'b9\'dc\'b5\'c0\'b5\'c4\'b6\'c1\'b6\'cb\'b5\'c8\'b4\'fd\'b9\'dc\'b5\'c0\'d6\'d0\'d3\'d0\'d0\'c2\'b5\'c4\'c4\'da\'c8\'dd\'bf\'c9\'b6\'c1\'a3\'ac\'be\'df\'cc\'e5\'c0\'b4\'cb\'b5\'be\'cd\'ca\'c7\'ca\'c7\'cd\'a8\'b9\'fd
+\f2 Linux
+\f1 \'cf\'b5\'cd\'b3\'b5\'c4
+\f2 Epoll
+\f1 \'bb\'fa\'d6\'c6\'d6\'d0\'b5\'c4
+\f2 epoll_wait
+\f1 \'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'b5\'c4\'a1\'a3
+\f2 \
+\'a0\'a0 \'a0 \'a0 \'a0 D. 
+\f1 \'b5\'b1\'cd\'f9
+\f2 Android
+\f1 \'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'b5\'c4\'cf\'fb\'cf\'a2\'b6\'d3\'c1\'d0\'d6\'d0\'bc\'d3\'c8\'eb\'d0\'c2\'b5\'c4\'cf\'fb\'cf\'a2\'ca\'b1\'a3\'ac\'bb\'e1\'cd\'ac\'ca\'b1\'cd\'f9\'b9\'dc\'b5\'c0\'d6\'d0\'b5\'c4\'d0\'b4\'b6\'cb\'d0\'b4\'c8\'eb\'c4\'da\'c8\'dd\'a3\'ac\'cd\'a8\'b9\'fd\'d5\'e2\'d6\'d6\'b7\'bd\'ca\'bd\'be\'cd\'bf\'c9\'d2\'d4\'bb\'bd\'d0\'d1\'d5\'fd\'d4\'da\'b5\'c8\'b4\'fd\'cf\'fb\'cf\'a2\'b5\'bd\'c0\'b4\'b5\'c4\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'f7\'cf\'df\'b3\'cc\'a1\'a3
+\f2 \
+\'a0\'a0 \'a0 \'a0 \'a0 E. 
+\f1 \'b5\'b1\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d6\'f7\'cf\'df\'b3\'cc\'d4\'da\'bd\'f8\'c8\'eb\'bf\'d5\'cf\'d0\'b5\'c8\'b4\'fd\'c7\'b0\'a3\'ac\'bb\'e1\'c8\'cf\'ce\'aa\'b5\'b1\'c7\'b0\'cf\'df\'b3\'cc\'b4\'a6\'c0\'ed\'bf\'d5\'cf\'d0\'d7\'b4\'cc\'ac\'a3\'ac\'d3\'da\'ca\'c7\'be\'cd\'bb\'e1\'b5\'f7\'d3\'c3\'c4\'c7\'d0\'a9\'d2\'d1\'be\'ad\'d7\'a2\'b2\'e1\'c1\'cb\'b5\'c4
+\f2 IdleHandler
+\f1 \'bd\'d3\'bf\'da\'a3\'ac\'ca\'b9\'b5\'c3\'d3\'a6\'d3\'c3\'b3\'cc\'d0\'f2\'d3\'d0\'bb\'fa\'bb\'e1\'d4\'da\'bf\'d5\'cf\'d0\'b5\'c4\'ca\'b1\'ba\'f2\'b4\'a6\'c0\'ed\'d2\'bb\'d0\'a9\'ca\'c2\'c7\'e9\'a1\'a3\
+\
+\
+}
