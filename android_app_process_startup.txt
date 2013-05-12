@@ -1,0 +1,69 @@
+简述Android应用程序进程的启动过程
+
+- Overview
+1. AMS启动一个应用程序组件时，如果发现其所属应用的进程没有启动，则请求Zygote进程启动之
+2. Z进程复制自身，使得app进程获得一个VM实例拷贝，能够运行Java语言开发的组件
+3. App进程启动时，获得Binder线程池和消息循环，前者用于IPC，后者用于线程之间的协作
+
+- 几个组件
+1. com.android.internal.os.ZygoteInit：
+* Z进程的启动类。
+* 预初始化一些类，然后等待从socket来的命令
+* 基于这些命令，创建继承了虚拟机初始状态的子进程
+
+2. com.android.internal.os.ZygnoteConnection：
+
+3. com.android.internal.os.RuntimeInit
+* 运行时初始化的主要入口点
+
+4. android.os.Process
+* 管理OS进程的工具类
+
+5. com.android.server.am.ProcessRecord
+* 正在运行的某进程的全部信息
+* 其中包括当前进程中创建的全部Android组件的相关信息：如activity, service, receiver, provider, etc.
+
+6. android.app.ActivityThread
+* 管理app进程主线程的执行
+* 规划和执行activities, broadcasts以及其它activity manager请求的操作。
+
+- android::AppRuntime
+* AndroidRuntime的派生类
+* app进程的主入口
+
+- ProcessState
+
+
+- 应用程序进程的创建
+1. AMS调用startProcessLocked()来向Z进程发送创建app进程的请求
+1.1 首先获取应用的uid和gid
+1.2 调用Process.start()来创建app进程
+1.2.1 Process.startViaZygote()执行创建：
+* 在这里，设置app进程参数，并请求Z进程创建新进程
+* 请求通过socket写操作完成
+* 指定新进程入口为ActivityThread.main()
+
+2. Z进程在ZygoteInit.runSelectLoopMode()的循环中接受到请求
+2.1 ZygoteConnect.runOnce()方法处理请求，创建并启动进程
+2.1.1 创建：fork
+2.1.2 启动：RuntimeInit.zygoteInit()：类似System进程的启动
+* 设置app进程的时区和键盘布局等通用信息
+* 启动一个Binder线程池
+* 进入入口，即ActivityThread.main()
+
+*** Binder线程池的启动
+1. AppRuntime::onZygoteInit() =>
+1.1 ProcessState::startThreadPool()启动线程池
+[ 每个支持Binder进程间通信的进程内部都有一个唯一的ProcessState对象 ]
+[ Binder线程用来接收IPC请求。而在应用开发中，只需要创建Binder对象并注册到SM，具体的通信就由Binder线程完成，具体后面再看 ]
+
+- 消息循环的创建
+1. App进程创建的最后，设置Activitythread.main()为入口
+2. 这个main()将创建消息循环
+* main()方法的执行通过抛出异常的方式
+* 不直接调用的原因：利用Java语言的异常处理机制来清理调用栈
+2.1 Looper.prepareMainLooper()
+2.2 创建ActivityThread实例并attach()
+[ 具体如何attach，看后面内容 ]
+
+2.3 启动循环
